@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Christopher Marlowe: The Rebel Playwright</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/black.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css">
 <style>
 .reveal h1, .reveal h2, .reveal h3 { text-transform: none; }
-.reveal h1 { font-size: 2.4em; }
-.reveal h2 { font-size: 1.6em; color: #42affa; }
-.reveal p, .reveal li { font-size: 0.85em; line-height: 1.5; }
+.reveal h1 { font-size: 2.2em; }
+.reveal h2 { font-size: 1.5em; color: #42affa; }
+.reveal p, .reveal li { font-size: 0.82em; line-height: 1.5; }
 .reveal ul { margin-top: 0.5em; }
 .reveal section { text-align: left; }
 .reveal .subtitle { color: #999; font-size: 0.7em; margin-top: 0.3em; }
@@ -18,6 +18,79 @@
 .reveal .quote { color: #e7ad52; font-style: italic; }
 .reveal .small { font-size: 0.65em; color: #888; }
 .reveal .center { text-align: center; }
+
+.reveal .slide-img {
+  max-height: 280px;
+  max-width: 70%;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  margin: 0.5em auto 0.6em;
+  display: block;
+  object-fit: cover;
+}
+.reveal .img-caption {
+  font-size: 0.5em;
+  color: #888;
+  margin-top: 0.2em;
+}
+.reveal section.img-left {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5em;
+}
+.reveal section.img-left .text-col {
+  flex: 1;
+}
+.reveal section.img-left .img-col {
+  flex: 0 0 40%;
+  text-align: center;
+}
+.reveal section.img-left .img-col .slide-img {
+  max-height: 350px;
+  max-width: 100%;
+  margin: 0;
+}
+
+.reveal [contenteditable="true"] {
+  outline: 2px dashed rgba(66,175,250,0.3);
+  outline-offset: 4px;
+  border-radius: 4px;
+  transition: outline-color 0.2s;
+}
+.reveal [contenteditable="true"]:focus {
+  outline-color: rgba(66,175,250,0.8);
+  background: rgba(66,175,250,0.05);
+}
+.edit-toolbar {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  z-index: 100;
+  display: flex;
+  gap: 6px;
+  background: rgba(0,0,0,0.7);
+  padding: 6px 10px;
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+}
+.edit-toolbar button {
+  background: rgba(66,175,250,0.2);
+  border: 1px solid rgba(66,175,250,0.4);
+  color: #42affa;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: inherit;
+}
+.edit-toolbar button:hover {
+  background: rgba(66,175,250,0.4);
+}
+.edit-toolbar button.active {
+  background: #42affa;
+  color: #000;
+}
 </style>
 </head>
 <body>
@@ -25,88 +98,126 @@
 <div class="slides">
 
 <section class="center">
-<h1>Christopher Marlowe</h1>
-<h2>The Rebel Playwright</h2>
-<p class="subtitle">1564 – 1593</p>
+<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Christopher_Marlowe_Plaque.jpg/800px-Christopher_Marlowe_Plaque.jpg" alt="Marlowe memorial plaque">
+<h1 contenteditable="true">Christopher Marlowe</h1>
+<h2 contenteditable="true">The Rebel Playwright</h2>
+<p class="subtitle" contenteditable="true">1564 – 1593</p>
 </section>
 
-<section>
-<h2>Early Life</h2>
+<section class="img-left">
+<div class="text-col">
+<h2 contenteditable="true">Early Life</h2>
 <ul>
-<li>Born in <span class="highlight">Canterbury, England, 1564</span> — same year as Shakespeare</li>
-<li>Father was a shoemaker — the family had little money</li>
-<li>Won a <span class="highlight">scholarship</span> to King's School, then Cambridge University</li>
-<li>Almost didn't get his master's degree — people thought he was a Catholic spy</li>
-<li>The Queen's council stepped in: Marlowe had done <span class="quote">"good service"</span> for the country</li>
+<li contenteditable="true">Born in <span class="highlight">Canterbury, England, 1564</span> — same year as Shakespeare</li>
+<li contenteditable="true">Father was a shoemaker — the family had little money</li>
+<li contenteditable="true">Won a <span class="highlight">scholarship</span> to King's School, then Cambridge University</li>
+<li contenteditable="true">Almost didn't get his master's degree — people thought he was a Catholic spy</li>
+<li contenteditable="true">The Queen's council stepped in: Marlowe had done <span class="quote">"good service"</span> for the country</li>
 </ul>
-<p class="small">Most historians believe he was working as a government spy.</p>
+<p class="small" contenteditable="true">Most historians believe he was working as a government spy.</p>
+</div>
+<div class="img-col">
+<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Kings_School_Canterbury.jpg/640px-Kings_School_Canterbury.jpg" alt="King's School Canterbury">
+<p class="img-caption">King's School, Canterbury</p>
+</div>
 </section>
 
-<section>
-<h2>The Spy Who Wrote Plays</h2>
+<section class="img-left">
+<div class="text-col">
+<h2 contenteditable="true">The Spy Who Wrote Plays</h2>
 <ul>
-<li>Between <span class="highlight">1587 and 1593</span>, Marlowe changed English theater forever</li>
-<li>Before Marlowe: plays used clunky rhymes or plain prose</li>
-<li>Marlowe introduced <span class="highlight">blank verse</span> — unrhymed poetry with a steady beat</li>
-<li>His characters weren't saints or symbols — they were ambitious, dangerous, and real</li>
-<li>In just <span class="highlight">six years</span>, he invented the kinds of plays that Shakespeare would later make famous</li>
+<li contenteditable="true">Between <span class="highlight">1587 and 1593</span>, Marlowe changed English theater forever</li>
+<li contenteditable="true">Before Marlowe: plays used clunky rhymes or plain prose</li>
+<li contenteditable="true">Marlowe introduced <span class="highlight">blank verse</span> — unrhymed poetry with a steady beat</li>
+<li contenteditable="true">His characters weren't saints or symbols — they were ambitious, dangerous, and real</li>
+<li contenteditable="true">In just <span class="highlight">six years</span>, he invented the kinds of plays that Shakespeare would later make famous</li>
 </ul>
+</div>
+<div class="img-col">
+<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Elizabethan_Theatre.JPG/640px-Elizabethan_Theatre.JPG" alt="Elizabethan theatre">
+<p class="img-caption">Elizabethan theatre</p>
+</div>
 </section>
 
-<section>
-<h2>His Greatest Plays</h2>
+<section class="img-left">
+<div class="text-col">
+<h2 contenteditable="true">His Greatest Plays</h2>
 <ul>
-<li><span class="highlight">Tamburlaine the Great</span> — a conqueror who stops at nothing; first full-length blank verse play</li>
-<li><span class="highlight">Doctor Faustus</span> — a man sells his soul to the devil for knowledge and power</li>
-<li><span class="highlight">The Jew of Malta</span> — a dark comedy about religious hypocrisy</li>
-<li><span class="highlight">Edward II</span> — a king destroyed by his own bad choices; a political tragedy</li>
+<li contenteditable="true"><span class="highlight">Tamburlaine the Great</span> — a conqueror who stops at nothing; first full-length blank verse play</li>
+<li contenteditable="true"><span class="highlight">Doctor Faustus</span> — a man sells his soul to the devil for knowledge and power</li>
+<li contenteditable="true"><span class="highlight">The Jew of Malta</span> — a dark comedy about religious hypocrisy</li>
+<li contenteditable="true"><span class="highlight">Edward II</span> — a king destroyed by his own bad choices; a political tragedy</li>
 </ul>
-<p class="small">Each play pushed the boundaries of what theater could do.</p>
+<p class="small" contenteditable="true">Each play pushed the boundaries of what theater could do.</p>
+</div>
+<div class="img-col">
+<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Faustus.jpg/440px-Faustus.jpg" alt="Doctor Faustus title page">
+<p class="img-caption">Doctor Faustus title page (1616)</p>
+</div>
 </section>
 
-<section>
-<h2>The Poet</h2>
+<section class="img-left">
+<div class="text-col">
+<h2 contenteditable="true">The Poet</h2>
 <ul>
-<li><span class="highlight">Hero and Leander</span> — a funny, romantic love story poem that doesn't take itself too seriously</li>
-<li><span class="highlight">The Passionate Shepherd to His Love</span> — one of the most famous poems of the entire era</li>
-<li>The shepherd promises his lover a perfect life of flowers and beauty</li>
-<li>Other poets wrote responses — Ralegh's <span class="quote">"Nymph's Reply"</span> says: <em>"Sounds nice, but it won't last"</em></li>
-<li>His translation of Ovid's poems was so bold the <span class="highlight">church ordered it burned</span></li>
+<li contenteditable="true"><span class="highlight">Hero and Leander</span> — a funny, romantic love story poem that doesn't take itself too seriously</li>
+<li contenteditable="true"><span class="highlight">The Passionate Shepherd to His Love</span> — one of the most famous poems of the entire era</li>
+<li contenteditable="true">The shepherd promises his lover a perfect life of flowers and beauty</li>
+<li contenteditable="true">Other poets wrote responses — Ralegh's <span class="quote">"Nymph's Reply"</span> says: <em>"Sounds nice, but it won't last"</em></li>
+<li contenteditable="true">His translation of Ovid's poems was so bold the <span class="highlight">church ordered it burned</span></li>
 </ul>
+</div>
+<div class="img-col">
+<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Ovidius_Illustrated_1340.jpg/440px-Ovidius_Illustrated_1340.jpg" alt="Ovid illustration">
+<p class="img-caption">Ovid — Marlowe translated his poems</p>
+</div>
 </section>
 
-<section>
-<h2>A Dangerous Reputation</h2>
+<section class="img-left">
+<div class="text-col">
+<h2 contenteditable="true">A Dangerous Reputation</h2>
 <ul>
-<li>Marlowe was as bold in life as the characters he created</li>
-<li>A man named <span class="highlight">Richard Baines</span> wrote down a list of shocking things Marlowe supposedly said:
+<li contenteditable="true">Marlowe was as bold in life as the characters he created</li>
+<li contenteditable="true">A man named <span class="highlight">Richard Baines</span> wrote down a list of shocking things Marlowe supposedly said:
   <ul>
-    <li>That Jesus wasn't real</li>
-    <li>That religion was just a way to control people</li>
+    <li contenteditable="true">That Jesus wasn't real</li>
+    <li contenteditable="true">That religion was just a way to control people</li>
   </ul>
 </li>
-<li>If taken to court, these charges could have meant <span class="highlight">execution</span></li>
-<li>He was arrested multiple times but always avoided serious punishment</li>
-<li>Probably because <span class="highlight">powerful people</span> were protecting him</li>
+<li contenteditable="true">If taken to court, these charges could have meant <span class="highlight">execution</span></li>
+<li contenteditable="true">He was arrested multiple times but always avoided serious punishment</li>
+<li contenteditable="true">Probably because <span class="highlight">powerful people</span> were protecting him</li>
 </ul>
+</div>
+<div class="img-col">
+<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Elizabeth_I_Armada_Portrait.jpg/440px-Elizabeth_I_Armada_Portrait.jpg" alt="Queen Elizabeth I">
+<p class="img-caption">Elizabeth I — whose council protected Marlowe</p>
+</div>
 </section>
 
-<section>
-<h2>A Mysterious Death</h2>
+<section class="img-left">
+<div class="text-col">
+<h2 contenteditable="true">A Mysterious Death</h2>
 <ul>
-<li>May 30, <span class="highlight">1593</span> — Marlowe was just <span class="highlight">29 years old</span></li>
-<li>Spent the day at a boarding house in Deptford with three men tied to the spy world</li>
-<li>Official story: an argument over the <span class="quote">dinner bill</span></li>
-<li>Ingram Frizer stabbed Marlowe above the right eye, killing him</li>
-<li>Frizer claimed self-defense and was <span class="highlight">pardoned within weeks</span></li>
-<li>Many believe the murder was connected to his <span class="highlight">spying activities</span></li>
+<li contenteditable="true">May 30, <span class="highlight">1593</span> — Marlowe was just <span class="highlight">29 years old</span></li>
+<li contenteditable="true">Spent the day at a boarding house in Deptford with three men tied to the spy world</li>
+<li contenteditable="true">Official story: an argument over the <span class="quote">dinner bill</span></li>
+<li contenteditable="true">Ingram Frizer stabbed Marlowe above the right eye, killing him</li>
+<li contenteditable="true">Frizer claimed self-defense and was <span class="highlight">pardoned within weeks</span></li>
+<li contenteditable="true">Many believe the murder was connected to his <span class="highlight">spying activities</span></li>
 </ul>
-<p class="small">We may never know the full truth.</p>
+<p class="small" contenteditable="true">We may never know the full truth.</p>
+</div>
+<div class="img-col">
+<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Deptford_Strand_1750.jpg/640px-Deptford_Strand_1750.jpg" alt="Deptford">
+<p class="img-caption">Deptford, where Marlowe died</p>
+</div>
 </section>
 
 <section class="center">
-<h2>His Legacy</h2>
-<p style="font-size:1em; line-height:1.8; text-align:center; max-width:700px; margin:0 auto;">
+<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Globe_theatre_2008.jpg/640px-Globe_theatre_2008.jpg" alt="The Globe Theatre">
+<h2 contenteditable="true">His Legacy</h2>
+<p style="font-size:0.95em; line-height:1.8; text-align:center; max-width:700px; margin:0 auto;" contenteditable="true">
 Marlowe died young, but his impact was enormous.<br><br>
 Shakespeare's early plays <span class="highlight">borrowed heavily</span> from Marlowe's style and rhythm.<br><br>
 Without Marlowe, the golden age of English theater<br>might never have happened at all.
@@ -114,18 +225,66 @@ Without Marlowe, the golden age of English theater<br>might never have happened 
 </section>
 
 <section class="center">
-<h1>Questions?</h1>
+<h1 contenteditable="true">Questions?</h1>
 </section>
 
 </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+
+<div class="edit-toolbar">
+  <button id="editToggle" title="Toggle edit mode">&#9998; Edit Mode</button>
+  <button id="saveBtn" title="Save changes to browser storage" style="display:none">&#128190; Save</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
 <script>
 Reveal.initialize({
   hash: true,
   transition: 'slide',
   width: 960,
   height: 700,
+  keyboard: true,
+});
+
+let editMode = false;
+
+document.getElementById('editToggle').addEventListener('click', function() {
+  editMode = !editMode;
+  const editables = document.querySelectorAll('.reveal [contenteditable]');
+  editables.forEach(el => {
+    el.contentEditable = editMode ? 'true' : 'false';
+  });
+  this.classList.toggle('active', editMode);
+  this.textContent = editMode ? '\u270E Editing...' : '\u270E Edit Mode';
+  document.getElementById('saveBtn').style.display = editMode ? 'block' : 'none';
+
+  if (editMode) {
+    Reveal.configure({ keyboard: false });
+  } else {
+    Reveal.configure({ keyboard: true });
+  }
+});
+
+document.getElementById('saveBtn').addEventListener('click', function() {
+  const slides = document.querySelectorAll('.reveal .slides section');
+  const data = [];
+  slides.forEach((s, i) => data.push({ index: i, html: s.innerHTML }));
+  localStorage.setItem('marlowe-slides-edits', JSON.stringify(data));
+  this.textContent = '\u2713 Saved!';
+  setTimeout(() => { this.textContent = '\uD83D\uDCBE Save'; }, 2000);
+});
+
+window.addEventListener('load', function() {
+  const saved = localStorage.getItem('marlowe-slides-edits');
+  if (saved) {
+    const data = JSON.parse(saved);
+    const slides = document.querySelectorAll('.reveal .slides section');
+    data.forEach(item => {
+      if (slides[item.index]) {
+        slides[item.index].innerHTML = item.html;
+      }
+    });
+  }
 });
 </script>
 </body>
