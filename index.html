@@ -20,13 +20,13 @@
 .reveal .center { text-align: center; }
 
 .reveal .slide-img {
-  max-height: 280px;
-  max-width: 70%;
+  max-height: 300px;
+  max-width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-  margin: 0.5em auto 0.6em;
+  margin: 0.3em auto 0.4em;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 .reveal .img-caption {
   font-size: 0.5em;
@@ -37,21 +37,25 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 1.5em;
+  gap: 1.2em;
 }
 .reveal section.img-left .text-col {
   flex: 1;
 }
 .reveal section.img-left .img-col {
-  flex: 0 0 40%;
+  flex: 0 0 38%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .reveal section.img-left .img-col .slide-img {
-  max-height: 350px;
+  max-height: 370px;
   max-width: 100%;
   margin: 0;
 }
 
+/* Editable styling */
 .reveal [contenteditable="true"] {
   outline: 2px dashed rgba(66,175,250,0.3);
   outline-offset: 4px;
@@ -62,14 +66,16 @@
   outline-color: rgba(66,175,250,0.8);
   background: rgba(66,175,250,0.05);
 }
+
+/* Toolbar moved to top-right, above the slide area */
 .edit-toolbar {
   position: fixed;
-  bottom: 12px;
+  top: 12px;
   right: 12px;
   z-index: 100;
   display: flex;
   gap: 6px;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.75);
   padding: 6px 10px;
   border-radius: 8px;
   backdrop-filter: blur(8px);
@@ -91,6 +97,11 @@
   background: #42affa;
   color: #000;
 }
+
+/* Push controls up so toolbar doesn't overlap */
+.reveal .controls {
+  bottom: 40px;
+}
 </style>
 </head>
 <body>
@@ -98,7 +109,7 @@
 <div class="slides">
 
 <section class="center">
-<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Christopher_Marlowe_Plaque.jpg/800px-Christopher_Marlowe_Plaque.jpg" alt="Marlowe memorial plaque">
+<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Christopher_Marlowe.jpg/500px-Christopher_Marlowe.jpg" alt="Christopher Marlowe portrait">
 <h1 contenteditable="true">Christopher Marlowe</h1>
 <h2 contenteditable="true">The Rebel Playwright</h2>
 <p class="subtitle" contenteditable="true">1564 – 1593</p>
@@ -117,8 +128,8 @@
 <p class="small" contenteditable="true">Most historians believe he was working as a government spy.</p>
 </div>
 <div class="img-col">
-<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Kings_School_Canterbury.jpg/640px-Kings_School_Canterbury.jpg" alt="King's School Canterbury">
-<p class="img-caption">King's School, Canterbury</p>
+<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Canterbury_Cathedral_001.jpg/500px-Canterbury_Cathedral_001.jpg" alt="Canterbury Cathedral">
+<p class="img-caption">Canterbury Cathedral</p>
 </div>
 </section>
 
@@ -134,8 +145,8 @@
 </ul>
 </div>
 <div class="img-col">
-<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Elizabethan_Theatre.JPG/640px-Elizabethan_Theatre.JPG" alt="Elizabethan theatre">
-<p class="img-caption">Elizabethan theatre</p>
+<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Excavation_of_the_Rose_Theatre%2C_Bankside%2C_London.jpg/500px-Excavation_of_the_Rose_Theatre%2C_Bankside%2C_London.jpg" alt="The Rose Theatre excavation">
+<p class="img-caption">The Rose Theatre excavation, Bankside</p>
 </div>
 </section>
 
@@ -151,8 +162,8 @@
 <p class="small" contenteditable="true">Each play pushed the boundaries of what theater could do.</p>
 </div>
 <div class="img-col">
-<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Faustus.jpg/440px-Faustus.jpg" alt="Doctor Faustus title page">
-<p class="img-caption">Doctor Faustus title page (1616)</p>
+<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Marlowes-Doctor-Faustus-Frontispiece_1631.jpg" alt="Doctor Faustus frontispiece 1631">
+<p class="img-caption">Doctor Faustus frontispiece (1631)</p>
 </div>
 </section>
 
@@ -168,7 +179,7 @@
 </ul>
 </div>
 <div class="img-col">
-<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Ovidius_Illustrated_1340.jpg/440px-Ovidius_Illustrated_1340.jpg" alt="Ovid illustration">
+<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Latin_Poet_Ovid.jpg" alt="Ovid">
 <p class="img-caption">Ovid — Marlowe translated his poems</p>
 </div>
 </section>
@@ -190,7 +201,7 @@
 </ul>
 </div>
 <div class="img-col">
-<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Elizabeth_I_Armada_Portrait.jpg/440px-Elizabeth_I_Armada_Portrait.jpg" alt="Queen Elizabeth I">
+<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Elizabeth_I_%28Armada_Portrait%29.jpg/500px-Elizabeth_I_%28Armada_Portrait%29.jpg" alt="Elizabeth I Armada Portrait">
 <p class="img-caption">Elizabeth I — whose council protected Marlowe</p>
 </div>
 </section>
@@ -209,13 +220,13 @@
 <p class="small" contenteditable="true">We may never know the full truth.</p>
 </div>
 <div class="img-col">
-<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Deptford_Strand_1750.jpg/640px-Deptford_Strand_1750.jpg" alt="Deptford">
-<p class="img-caption">Deptford, where Marlowe died</p>
+<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Memorial_to_Christopher_Marlowe_on_the_Eastern_Wall_around_St_Nicholas%27_Church%2C_Deptford_Green_%28II%29.jpg/500px-Memorial_to_Christopher_Marlowe_on_the_Eastern_Wall_around_St_Nicholas%27_Church%2C_Deptford_Green_%28II%29.jpg" alt="Marlowe Memorial Deptford">
+<p class="img-caption">Marlowe memorial, St Nicholas' Church, Deptford</p>
 </div>
 </section>
 
 <section class="center">
-<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Globe_theatre_2008.jpg/640px-Globe_theatre_2008.jpg" alt="The Globe Theatre">
+<img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Wenceslaus-Hollar-The-second-Globe-playhouse-detail.png" alt="The Globe Theatre" style="max-height:250px;">
 <h2 contenteditable="true">His Legacy</h2>
 <p style="font-size:0.95em; line-height:1.8; text-align:center; max-width:700px; margin:0 auto;" contenteditable="true">
 Marlowe died young, but his impact was enormous.<br><br>
@@ -233,7 +244,7 @@ Without Marlowe, the golden age of English theater<br>might never have happened 
 
 <div class="edit-toolbar">
   <button id="editToggle" title="Toggle edit mode">&#9998; Edit Mode</button>
-  <button id="saveBtn" title="Save changes to browser storage" style="display:none">&#128190; Save</button>
+  <button id="saveBtn" title="Save changes to browser" style="display:none">&#128190; Save</button>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
@@ -257,7 +268,6 @@ document.getElementById('editToggle').addEventListener('click', function() {
   this.classList.toggle('active', editMode);
   this.textContent = editMode ? '\u270E Editing...' : '\u270E Edit Mode';
   document.getElementById('saveBtn').style.display = editMode ? 'block' : 'none';
-
   if (editMode) {
     Reveal.configure({ keyboard: false });
   } else {
